@@ -22,4 +22,12 @@
   -  how? 작은따옴펴대신 백틱으로 문자열을 표현한다.
   -  템플릿 문자열에 특수기호 `$`를 사용해서 변수 또는 식을 포함할 수 있다.  
 #### exercise 01
-다음은 병합연산자로 표현된 코드다. 템플릿 문자열을 저
+다음은 병합연산자로 표현된 코드다. 템플릿 문자열을 적용하여 바꿔봐라
+```
+var cart = {name:'도서',price:1500}
+var getTotal = function(cart){
+  return cart.price + '원';
+};
+var myCart = '장바구니에' + cart.name + '가 있습니다. 총 금액은 '+getTotal(cart)+'입니다.';
+// => var myCart = `장바구니에 ${cart.name}가 있습니다. 총 금액은 ${getTotal(cart)}입니다.`; : 템플릿 문자열 적용하기
+```
